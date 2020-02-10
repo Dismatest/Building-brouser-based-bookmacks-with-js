@@ -1,0 +1,163 @@
+<html>
+<head>
+<link rel='stylesheet' href='src/css/bootstrap.min.css'/>
+<title>modals</title>
+<style>
+html{
+    overflow-y: scroll;
+}
+.accordian{
+    background: #FFF;
+    border-radius: 5px;
+    padding: 30px;
+}
+ul {
+    margin-bottom: 0;
+}
+.question{
+    border-top: 1px solid #FFF;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+
+}
+.question a{
+    font-size: 15px;
+    margin: 0;
+    text-decoration: none;
+    color: #c00c00;
+}
+.question a:hover{
+    color: grey;
+}
+.question .icon{
+   position: absolute;
+   right: 20px;
+   cursor: pointer; 
+   top: 0;
+   color: #c00c00;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+.answer p{
+    padding: 10px;
+}
+. accordian li.open .question .icon{
+    transform: rotate(180deg);
+}
+.accordian li.open .answer{
+max-height: 80px;
+}
+
+</style>
+</head>
+<body>
+<!-- Button trigger modal -->
+<div class="container p-4">
+<button class="btn btn-secondary" btn-sm p-2 mt-3 type="button" data-toggle="modal" data-target="#myModal1"><i class="fas fa-plus"></i>
+ Addstudent
+  
+</button>
+
+</div>
+
+<div class="container p-4"> 
+ <button type="button" class="btn btn-secondary" btn-sm p-2 mt-3 id="signin"><i class="fas fa-tasks"></i>Trackprogress</button>
+ </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h5 class="modal-title" id="myModalLabel">Choose student category you wish to register</h5>
+      </div>
+      
+      <div class="modal-body">
+      <div class="accordian">
+      <ul class="list-unstyled">
+      <li class="open">
+      <div class="question">
+       <a href="#" >Pre primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Pre primary is the nusery school class 1-3</p>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="#" >Lower primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Lower primary runs for three years 4-6</p>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="#">Upper primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Upper primary runs for two years 6-8</p>
+      </div>
+      </li>
+       <li>
+      <div class="question">
+        <a href="#">All students</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>yes your are probably going to love programming</p>
+      </div>
+      </li>
+      </ul>
+      </div>
+        
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="far fa-times-circle"></i></button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h5 class="modal-title" id="myModalLabel">Choose student category you wish to track progress</h5>
+      </div>
+      
+      <div class="modal-body">
+        <p>Sign In Error</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="far fa-times-circle"></i></button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+<script src="src/js/js/jquery.min.js"></script>
+<script src="src/js/js/bootstrap.min.js"></script>
+<script src="all.js"></script>
+<script src="codepen.js"></script>
+
+</body>
+</html>
